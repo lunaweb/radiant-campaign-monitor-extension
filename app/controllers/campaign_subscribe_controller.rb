@@ -10,7 +10,7 @@ class CampaignSubscribeController < ApplicationController
     camp = Campaign.new(config, params[:campaign])
     @page.last_campaign = config.page.last_campaign = camp
     
-    if camp.subscribe(params['campaign']['email'])
+    if params['campaign'] && camp.subscribe(params['campaign']['email'])
       redirect_to (config.get('redirect_to') || "#{@page.url}")
     else
       render :text => @page.render

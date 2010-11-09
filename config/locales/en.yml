@@ -1,3 +1,14 @@
----
 en:
-  campaign monitor: Campaign Monitor
+    campaign monitor: Campaign Monitor
+    
+    campaign_error_0: "Success"
+    campaign_error_1: "Invalid email address"
+    campaign_error_100: "Invalid API Key"
+    campaign_error_101: "Invalid ListID"
+    campaign_error_103: "API Key is empty. This can be the result of an invalid SOAP packet."
+    campaign_error_202: "Already removed/Not in list"
+    campaign_error_204: "In Suppression List"
+    campaign_error_205: "Is Deleted"
+    campaign_error_206: "Is Unsubscribed"
+    campaign_error_207: "Is Bounced"
+    campaign_error_208: "Is Unconfirmed"

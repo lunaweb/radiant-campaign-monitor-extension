@@ -87,6 +87,13 @@ module CampaignMonitorTags
   tag "campaign:list:subscribe" do |tag|
     action = "/pages/#{tag.locals.page.id}/campaign_subscribe"
     
+    unless tag.attr['action'].nil?
+      page = Page.find_by_url(tag.attr['action'])
+      return 'la page '+tag.attr['action']+' n\'existe pas' if page.nil?
+      
+      action = "/pages/#{page.id}/campaign_subscribe"
+    end
+    
     results = []
     results << %(<form action="#{action}" method="post" #{campaign_attrs(tag)}>)
     results <<   tag.expand
@@ -132,12 +139,12 @@ module CampaignMonitorTags
     }
     tag "campaign:#{type}" do |tag|
       raise "'campaign:#{type}' tag requires a 'name' attribute" if tag.attr['name'].blank?
-      value = (prior_value(tag) || tag.attr['value'])
+      value = (campaign_prior_value(tag) || tag.attr['value'])
       result = [%(<input type="#{type}" value="#{value}" #{campaign_attrs(tag)}>)]
     end
   end
 
-  def prior_value(tag, tag_name=tag.attr['name'])
+  def campaign_prior_value(tag, tag_name = tag.attr['name'])
     if campaign = tag.locals.page.last_campaign
       campaign.data[tag_name]
     else

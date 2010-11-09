@@ -1,0 +1,10 @@
+fr:
+    campaign_error_1: ""
+    campaign_error_100: "La configuration api_key est invalide."
+    campaign_error_101: "La configuration list_id est invalide."
+    campaign_error_103: "La configuration api_key est obligatoire."
+    campaign_error_202: "Already removed/Not in list"
+    campaign_error_206: "L'email existe dans la liste des désinscrits."
+    email is invalid: "L'email est invalide."
+    api_key is required: "La configuration api_key est obligatoire."
+    list_id is required: "La configuration list_id est obligatoire."
