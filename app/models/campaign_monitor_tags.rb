@@ -111,6 +111,13 @@ module CampaignMonitorTags
   tag "campaign:list:unsubscribe" do |tag|
     action = "/pages/#{tag.locals.page.id}/campaign_unsubscribe"
     
+    unless tag.attr['action'].nil?
+      page = Page.find_by_url(tag.attr['action'])
+      return 'la page '+tag.attr['action']+' n\'existe pas' if page.nil?
+      
+      action = "/pages/#{page.id}/campaign_subscribe"
+    end
+    
     results = []
     results << %(<form action="#{action}" method="post" #{campaign_attrs(tag)}>)
     results <<   tag.expand
@@ -140,7 +147,7 @@ module CampaignMonitorTags
     tag "campaign:#{type}" do |tag|
       raise "'campaign:#{type}' tag requires a 'name' attribute" if tag.attr['name'].blank?
       value = (campaign_prior_value(tag) || tag.attr['value'])
-      result = [%(<input type="#{type}" value="#{value}" #{campaign_attrs(tag)}>)]
+      result = [%(<input type="#{type}" value="#{value}" #{campaign_attrs(tag)} />)]
     end
   end
 
