@@ -1,5 +1,6 @@
 class CampaignController < ApplicationController
 
+  no_login_required
   skip_before_filter :verify_authenticity_token  
 
   def subscribe
