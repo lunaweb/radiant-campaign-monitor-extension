@@ -31,6 +31,7 @@ class CampaignController < ApplicationController
     else
       render :text => @page.render
     end
+    
   end
   
 end
