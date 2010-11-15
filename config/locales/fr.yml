@@ -1,10 +1,16 @@
 fr:
-    campaign_error_1: ""
+    campaign monitor: Campaign Monitor
+    campaign_error_0: "Succès"
+    campaign_error_1: "Adresse email invalide."
     campaign_error_100: "La configuration api_key est invalide."
     campaign_error_101: "La configuration list_id est invalide."
     campaign_error_103: "La configuration api_key est obligatoire."
     campaign_error_202: "L'email est déjà désinscrit."
+    campaign_error_204: "Dans la liste de suppression."
+    campaign_error_205: "Est effacée."
     campaign_error_206: "L'email existe dans la liste des désinscrits."
-    email is invalid: "L'email est invalide."
+    campaign_error_208: "Est non confirmée"
+    campaign_error_207: "Ne peut être délivré."
+    email is invalid:   "L'email est invalide."
     api_key is required: "La configuration api_key est obligatoire."
     list_id is required: "La configuration list_id est obligatoire."
