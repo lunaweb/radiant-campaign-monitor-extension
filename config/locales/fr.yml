@@ -2,15 +2,13 @@ fr:
     campaign_error_100: "La configuration api_key est invalide."
     campaign_error_101: "La configuration list_id est invalide."
     campaign_error_103: "La configuration api_key est obligatoire."
-    campaign_error_201: "L'email est déjà inscrit."
+    campaign_error_201: "Merci, vous êtes déjà abonné."
     campaign_error_202: "L'email est déjà désinscrit."
     campaign_error_204: "Dans la liste de suppression."
     campaign_error_205: "Est effacée."
     campaign_error_206: "L'email existe dans la liste des désinscrits."
-    campaign_error_207: "Is Bounced"
-    campaign_error_208: "Is Unconfirmed"
-    
-    # Merci, vous êtes déjà abonné.
+    campaign_error_207: "Ne peut être délivré."
+    campaign_error_208: "Est non confirmée"
     
     email is invalid: "Veuillez saisir une adresse e-mail valide."
     api_key is required: "La configuration api_key est obligatoire."
