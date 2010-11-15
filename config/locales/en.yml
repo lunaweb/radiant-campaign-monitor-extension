@@ -6,6 +6,7 @@ en:
     campaign_error_100: "Invalid API Key"
     campaign_error_101: "Invalid ListID"
     campaign_error_103: "API Key is empty. This can be the result of an invalid SOAP packet."
+    campaign_error_201: "In Active List"
     campaign_error_202: "Already removed/Not in list"
     campaign_error_204: "In Suppression List"
     campaign_error_205: "Is Deleted"

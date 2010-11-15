@@ -32,7 +32,10 @@ class Campaign
     
     begin
       Campaigning::Subscriber.const_set(:CAMPAIGN_MONITOR_API_KEY, @config.get('api_key'))
+      
       subscriber = Campaigning::Subscriber.new(email, name)
+      raise "201 - The subscriber is already in active list" if subscriber.is_subscribed?(@config.get('list_id'))
+      
       subscriber.add!(@config.get('list_id'))
     rescue RuntimeError => e
       code = e.to_s.to_i
