@@ -1,6 +1,5 @@
 en:
     campaign monitor: Campaign Monitor
-    
     campaign_error_0: "Success"
     campaign_error_1: "Invalid email address"
     campaign_error_100: "Invalid API Key"
@@ -13,3 +12,6 @@ en:
     campaign_error_206: "Is Unsubscribed"
     campaign_error_207: "Is Bounced"
     campaign_error_208: "Is Unconfirmed"
+    email is invalid:   "Invalid Email"
+    api_key is required: "api_key is mandatory."
+    list_id is required: "list_id configuration parameter is mandatory."
